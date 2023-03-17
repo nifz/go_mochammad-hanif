@@ -1,0 +1,7 @@
+## Configuration Management and CLI
+
+- Command Line Interface (CLI) adalah cara kita berinteraksi dengan komputer menggunakan perintah-perintah tulisan. Ada dua jenis cara kita bisa berinteraksi dengan komputer yaitu dengan menggunakan antarmuka grafis (GUI) atau menggunakan antarmuka baris perintah (CLI).
+- GUI adalah tampilan yang memudahkan kita untuk berinteraksi dengan komputer karena kita hanya perlu mengklik tombol atau pilihan yang tersedia di layar.
+- Sedangkan pada CLI kita harus mengetikkan perintah-perintah dalam baris perintah untuk menjalankan tugas yang kita inginkan.
+- Di sistem operasi UNIX ada dua jenis antarmuka baris perintah (shell) yang paling umum digunakan yaitu ZSH dan BASH. Shell adalah program yang memungkinkan kita berinteraksi dengan sistem operasi menggunakan baris perintah.
+- Perintah-perintah dalam UNIX Shell digunakan untuk melakukan tugas-tugas tertentu dalam sistem operasi. Beberapa contohnya adalah perintah "cd" untuk pindah ke direktori lain "ls" untuk menampilkan daftar file dalam suatu direktori dan "mkdir" untuk membuat direktori baru. Ketika menggunakan CLI kita harus mengetikkan perintah-perintah ini dengan benar untuk menjalankan tugas yang diinginkan.

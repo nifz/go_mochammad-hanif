@@ -1,0 +1,2 @@
+User: moch
+Darwin Hanifs-MacBook-Air.local 22.2.0 Darwin Kernel Version 22.2.0: Fri Nov 11 02:04:44 PST 2022; root:xnu-8792.61.2~4/RELEASE_ARM64_T8103 arm64

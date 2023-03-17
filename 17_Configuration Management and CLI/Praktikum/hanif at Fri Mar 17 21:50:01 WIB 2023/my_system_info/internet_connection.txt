@@ -1,0 +1,8 @@
+PING google.com (74.125.68.102): 56 data bytes
+64 bytes from 74.125.68.102: icmp_seq=0 ttl=58 time=21.907 ms
+64 bytes from 74.125.68.102: icmp_seq=1 ttl=58 time=20.759 ms
+64 bytes from 74.125.68.102: icmp_seq=2 ttl=58 time=20.660 ms
+
+--- google.com ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 20.660/21.109/21.907/0.566 ms
