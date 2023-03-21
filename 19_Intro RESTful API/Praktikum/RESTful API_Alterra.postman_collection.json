@@ -1,0 +1,672 @@
+{
+	"info": {
+		"_postman_id": "dd1fb6f2-3e05-4e13-9bc9-2fb603f0e0aa",
+		"name": "RESTful API_Alterra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9741759"
+	},
+	"item": [
+		{
+			"name": "Skenario 1",
+			"item": [
+				{
+					"name": "1_GET All Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2_GET Data By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts/3",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3_POST Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 1,\n    \"title\": \"foo\",\n    \"body\": \"bar\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4_DELETE Data",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts/1",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Skenario 2",
+			"item": [
+				{
+					"name": "Token",
+					"item": [
+						{
+							"name": "GET Token",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/token?client_id=test&client_secret=secret123",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"token"
+									],
+									"query": [
+										{
+											"key": "client_id",
+											"value": "test"
+										},
+										{
+											"key": "client_secret",
+											"value": "secret123"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Client",
+					"item": [
+						{
+							"name": "1_GET All Data Client",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/client",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"client"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "2_GET Data Client By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/client/1",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"client",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3_POST Data Client",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"client_id\": 1234,\n  \"client_key\": \"CLIENT01\",\n  \"client_secret\": \"SECRET01\",\n  \"status\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/client",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"client"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "4_PUT Data Client",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"client_id\": 1234,\n  \"client_key\": \"CLIENT01\",\n  \"client_secret\": \"SECRET01\",\n  \"status\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/client/1",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"client",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "5_DELETE Data Client",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/client/1",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"client",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "1_GET All Data User",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/user",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "2_GET Data User By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/user/1",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3_POST Data User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"name\": \"Rudy Sujarwo\",\n  \"age\": 56,\n  \"sex\": \"male\",\n  \"client_id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/user",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "4_PUT Data User",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"name\": \"Rudy Sujarwo\",\n  \"age\": 56,\n  \"sex\": \"male\",\n  \"client_id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/user/1",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "5_DELETE Data User",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/user/1",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Book",
+					"item": [
+						{
+							"name": "1_GET All Data Book",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/book",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"book"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "2_GET Data Book By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/book/1",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"book",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3_POST Data Book",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"client_id\": 1234,\n  \"client_key\": \"CLIENT01\",\n  \"client_secret\": \"SECRET01\",\n  \"status\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/book",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"book"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "4_PUT Data Book",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1234,\n  \"title\": \"Judul Buku Satu\",\n  \"isbn\": \"1-234-5678-9101112-13\",\n  \"writer\": \"Dr. Who\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/book/1",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"book",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "5_DELETE Data Book",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/book/1",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"book",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Rent",
+					"item": [
+						{
+							"name": "1_GET All Data Rent",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/rent",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"rent"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "2_GET Data Rent By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/rent/1",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"rent",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3_POST Data Rent",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"book_id\": 1234,\n  \"user_id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0/rent",
+									"protocol": "https",
+									"host": [
+										"virtserver",
+										"swaggerhub",
+										"com"
+									],
+									"path": [
+										"sepulsa",
+										"RentABook-API",
+										"1.0.0",
+										"rent"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
