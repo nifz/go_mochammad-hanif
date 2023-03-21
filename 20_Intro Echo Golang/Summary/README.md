@@ -1,0 +1,10 @@
+## Intro Echo Golang
+
+- Third Party Golang adalah package atau library yang dibuat oleh pengembang lain dan disediakan secara terbuka untuk digunakan dalam pengembangan aplikasi Golang.
+- Dalam pengembangan jaringan kita membutuhkan banyak fitur yang mungkin tidak disediakan secara default dalam bahasa pemrograman Golang. Oleh karena itu kita dapat menggunakan Third Party Golang untuk memperluas fitur jaringan kita.
+- Echo adalah salah satu framework web untuk Golang yang fokus pada kecepatan kemudahan penggunaan dan pengembangan aplikasi RESTful API. Alasan mengapa Echo digunakan karena memiliki banyak fitur yang sangat berguna dalam membangun aplikasi web.
+- Untuk menginstall Echo pertama-tama pastikan Golang sudah terinstall di komputer Anda. Setelah itu gunakan perintah "go get github.com/labstack/echo/v4" di command prompt atau terminal Anda untuk menginstall Echo.
+- Basic Routes & Controller digunakan untuk membuat rute dasar dan menghubungkannya dengan fungsi controller yang sesuai. Rute digunakan untuk menentukan URL mana yang akan digunakan untuk mengakses aplikasi web sementara controller digunakan untuk mengatur fungsi yang akan dijalankan ketika URL tersebut diakses.
+- Render Data (JSON Response) adalah proses mengembalikan data dalam bentuk JSON sebagai respon dari permintaan HTTP. Ini berguna karena JSON sangat umum digunakan dalam pengembangan aplikasi web modern.
+- Retrieve Data adalah proses untuk mengambil data dari suatu sumber data. Dalam konteks Echo kita dapat menggunakan HTTP request untuk mengambil data dari server atau database dan mengirimkannya sebagai respon ke pengguna.
+- Binding Data adalah proses mengambil data yang dikirim dalam permintaan HTTP dan mengkonversinya menjadi tipe data yang sesuai dalam bahasa pemrograman Golang. Ini berguna dalam menerima data yang dikirim dari pengguna dalam bentuk form atau JSON dan memprosesnya dalam kode aplikasi.
