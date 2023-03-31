@@ -10,7 +10,7 @@ import (
 func GetBlogs() (interface{}, error) {
 	var blogs []models.Blog
 
-	if err := configs.DB.Find(&blogs).Error; err != nil {
+	if err := configs.DB.Preload("User").Find(&blogs).Error; err != nil {
 		return nil, err
 	}
 	return blogs, nil
@@ -23,6 +23,11 @@ func CreateBlog(c echo.Context) (interface{}, error) {
 	if err := configs.DB.Save(&blog).Error; err != nil {
 		return nil, err
 	}
+
+	if err := configs.DB.Preload("User").Find(&blog).Error; err != nil {
+		return nil, err
+	}
+
 	return blog, nil
 }
 
@@ -30,7 +35,7 @@ func GetBlog(blogID int) (interface{}, error) {
 	// query the database for the book with the given ID
 	var blog models.Blog
 
-	if err := configs.DB.Where("id = ?", blogID).First(&blog).Error; err != nil {
+	if err := configs.DB.Preload("User").Where("id = ?", blogID).First(&blog).Error; err != nil {
 		return nil, err
 	}
 
@@ -45,13 +50,13 @@ func DeleteBlog(blogID int) (interface{}, error) {
 		return nil, err
 	}
 
-	return "Successfully deleted", nil
+	return nil, nil
 }
 
 func UpdateBlog(c echo.Context) (interface{}, error) {
 	var blog models.Blog
 
-	if err := configs.DB.Where("id = ?", c.Param("id")).First(&blog).Error; err != nil {
+	if err := configs.DB.Preload("User").Where("id = ?", c.Param("id")).First(&blog).Error; err != nil {
 		return nil, err
 	}
 	if err := c.Bind(&blog); err != nil {

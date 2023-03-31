@@ -45,7 +45,7 @@ func DeleteBook(bookID int) (interface{}, error) {
 		return nil, err
 	}
 
-	return "Successfully deleted", nil
+	return nil, nil
 }
 
 func UpdateBook(c echo.Context) (interface{}, error) {

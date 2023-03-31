@@ -8,7 +8,7 @@ import (
 )
 
 func GetUsers() (interface{}, error) {
-	var users models.User
+	var users []models.User
 
 	if err := configs.DB.Find(&users).Error; err != nil {
 		return nil, err
@@ -44,7 +44,7 @@ func DeleteUser(userID int) (interface{}, error) {
 		return nil, err
 	}
 
-	return "Successfully deleted", nil
+	return nil, nil
 }
 
 func UpdateUser(c echo.Context) (interface{}, error) {
