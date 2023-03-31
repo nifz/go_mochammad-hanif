@@ -1,0 +1,79 @@
+package database
+
+import (
+	"praktikum/configs"
+	"praktikum/middlewares"
+	"praktikum/models"
+
+	"github.com/labstack/echo"
+)
+
+func LoginUser(user *models.User) (interface{}, error) {
+	var err error
+	var userToken models.UserToken
+	if err = configs.DB.Where("email = ? AND password = ?", user.Email, user.Password).First(user).Error; err != nil {
+		return nil, err
+	}
+	userToken.Token, err = middlewares.CreateToken(int(user.ID))
+	if err != nil {
+		return nil, err
+	}
+	if err := configs.DB.Save(user).Error; err != nil {
+		return nil, err
+	}
+	return userToken, nil
+}
+
+func GetUsers() (interface{}, error) {
+	var users []models.User
+
+	if err := configs.DB.Find(&users).Error; err != nil {
+		return nil, err
+	}
+	return users, nil
+}
+
+func CreateUser(c echo.Context) (interface{}, error) {
+	var user models.User
+	c.Bind(&user)
+	if err := configs.DB.Save(&user).Error; err != nil {
+		return nil, err
+	}
+	return user, nil
+}
+
+func GetUser(userID int) (interface{}, error) {
+	// query the database for the user with the given ID
+	var user models.User
+
+	if err := configs.DB.Where("id = ?", userID).First(&user).Error; err != nil {
+		return nil, err
+	}
+
+	return user, nil
+}
+
+func DeleteUser(userID int) (interface{}, error) {
+	var user models.User
+	// delete the user with the given ID from the database
+
+	if err := configs.DB.Where("id = ?", userID).Delete(&user).Error; err != nil {
+		return nil, err
+	}
+
+	return nil, nil
+}
+
+func UpdateUser(c echo.Context) (interface{}, error) {
+	var user models.User
+
+	if err := configs.DB.Where("id = ?", c.Param("id")).First(&user).Error; err != nil {
+		return nil, err
+	}
+	if err := c.Bind(&user); err != nil {
+		return nil, err
+	}
+	configs.DB.Save(&user)
+
+	return user, nil
+}
