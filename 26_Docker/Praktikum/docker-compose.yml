@@ -1,0 +1,35 @@
+version: "3"
+services:
+  db:
+    container_name: cleancode-alta-db
+    image: "mysql:8.0"
+    environment:
+      - MYSQL_DATABASE=alta_cleancode
+      - MYSQL_ROOT_PASSWORD=@root
+      - MYSQL_USER=mysql
+      - MYSQL_PASSWORD=@root
+      - DATABASE_HOST=db
+      - LC_ALL=C.UTF-8
+      - LANG=C.UTF-8
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./data:/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+  api:
+    container_name: cleancode-alta-api
+    image: "loremhanif/cleancode-alta-image"
+    build: .
+    restart: on-failure
+    depends_on:
+      - db
+    links:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_NAME=alta_cleancode
+      - DB_USER=root
+      - DB_PASS=@root
+    ports:
+      - 8000:8000
