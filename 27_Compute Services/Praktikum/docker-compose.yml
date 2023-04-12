@@ -1,8 +1,6 @@
 version: "3"
 services:
   app:
-    container_name: cleancode-alta-api
-    image: "loremhanif/cleancode-alta-image"
     build: .
     restart: on-failure
     environment:
@@ -12,4 +10,4 @@ services:
       - DB_USER=admin
       - DB_PASS=qweqwe123
     ports:
-      - 80:80
+      - 8080:8080
