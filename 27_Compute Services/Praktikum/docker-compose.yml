@@ -1,0 +1,15 @@
+version: "3"
+services:
+  app:
+    container_name: cleancode-alta-api
+    image: "loremhanif/cleancode-alta-image"
+    build: .
+    restart: on-failure
+    environment:
+      - DB_HOST=cleancode-alta-db.cpqktprvxzrp.ap-southeast-2.rds.amazonaws.com
+      - DB_PORT=3306
+      - DB_NAME=cleancode_alta_db
+      - DB_USER=admin
+      - DB_PASS=qweqwe123
+    ports:
+      - 80:80
